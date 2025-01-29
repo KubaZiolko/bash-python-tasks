@@ -30,10 +30,11 @@ while true; do
 	
 		x) 	echo "zakonczenie dzialania skryptu"
 			exit 0
+			;;
 
 		*)
 			if [[ $wybor =~ ^[0-9]+$ ]]; then
-				for ((i=1 ; i<=wybor: i++)); do
+				for ((i=1; i<=wybor; i++)); do
 					date
 				done
 			else	
