@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+echo "Wprowadz tekst do wyswietlenia"
+read tekst
+
+echo "Wprowadz ilosc powtorzen"
+read liczba
+
+
+licznik=1
+
+while [ $licznik -le $liczba ]; do
+
+	echo "$tekst"
+	licznik=$((licznik + 1))
+done

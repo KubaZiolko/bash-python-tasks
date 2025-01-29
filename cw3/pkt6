@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+while true; do
+	
+	echo "Wprowadź tekst:"
+	echo "- a: Utworzy pusty plik daty.log."
+	echo "- b: Dołączy bieżącą datę i godzinę do pliku daty.log."
+	echo "- c: Wyświetli zawartość pliku daty.log."
+	echo "- x: Zakończy działanie skryptu."
+	echo "LUB podaj liczbę, która określi ile razy ma zostać wypisana bieżąca data."
+	read wybor
+
+
+	case $wybor in 
+	
+		a)
+			cat /dev/null > daty.log
+			echo "Plik daty.log zostal utworzony "
+			;;
+
+		b)
+			date >> daty.log
+			echo "Biezaca data i godzina zostaly dolaczone do pliku daty.log"
+			;;
+
+		c) 
+			cat daty.log
+			;;
+	
+		x) 	echo "zakonczenie dzialania skryptu"
+			exit 0
+
+		*)
+			if [[ $wybor =~ ^[0-9]+$ ]]; then
+				for ((i=1 ; i<=wybor: i++)); do
+					date
+				done
+			else	
+				echo "Niepoprawny wybor, sproboj ponownie"
+			fi
+			;;
+	esac		
+done	

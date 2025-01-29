@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+pushd /dev
+
+for element in *; do
+
+	if [ -f "$element" ]; then
+		echo "$element jest plikiem"
+		echo
+	elif [ -d "$element" ]; then
+		echo "$element jest katalogiem"
+		echo
+	elif [ -e "$element" ]; then
+                echo "$element jest urzadzeniem lub plikiem specjalnym"
+		echo
+	else
+		echo "$element nie jest plikiem ani katalogiem."
+		echo
+	fi
+done
+
+popd

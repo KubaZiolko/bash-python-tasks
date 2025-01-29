@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "Wprowadz pierwsza liczbe:"
+read liczba1
+
+echo "Wprowadz druga liczbe:"
+read liczba2
+
+if [ -z "$liczba1" ] || [ -z "$liczba2" ]; then
+	echo "Musisz wprowadzic dwie liczby"
+	exit 1
+fi
+
+
+
+
+
+if [ $liczba1 -gt $liczba2 ] ; then
+	echo "Pierwsza liczba ($liczba1) jest wieksza."
+
+elif [ $liczba1 -lt $liczba2 ] ; then
+	echo "Druga liczba ($liczba2) jest wieksza."
+else 
+
+	echo "Obie liczby sa rowne."
+fi

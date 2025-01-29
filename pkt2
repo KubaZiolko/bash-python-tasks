@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test -e ~/cw3/pkt1; then
+	echo "Plik pkt1 istnieje"
+else
+	echo "Plik nie istnieje"
+fi
+
+if test ! -e ~/cw3/dane1; then
+	echo "Linia tekstu w danych1" > ~/cw3/dane1
+	echo "Plik dane1 zostal utworzony"
+else
+	echo "Plik dane1 juz istnieje"
+fi
