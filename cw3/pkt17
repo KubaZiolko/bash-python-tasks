@@ -1,0 +1,15 @@
+#!/bin/bash
+
+current_date=$(date)
+
+read -r day month year time <<< $(date)
+
+hour=$(echo $time | cut -d ':' -f 1)
+minute=$(echo $time | cut -d ':' -f 2)
+second=$(echo $time | cut -d ':' -f 3)
+
+
+formatted_date="$year-$month-$day $hour:$minute:$second"
+
+
+echo "$formatted_date"
